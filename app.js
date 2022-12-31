@@ -30,9 +30,11 @@ app.get('/I/want/title', (req, res) => {
             <body>
               <h1> Following are the titles of given websites: </h1>
               <ul>
-                ${titles.map(
-									({ address, title }) => `<li> ${address} - "${title}" </li>`
-								)}
+                ${titles
+									.map(
+										({ address, title }) => `<li> ${address} - "${title}" </li>`
+									)
+									.join(' ')}
               </ul>
             </body>
             </html>
@@ -50,9 +52,11 @@ app.get('/I/want/title', (req, res) => {
           <body>
             <h1> Following are the titles of given websites: </h1>
             <ul>
-              ${titles.map(
-								({ address, title }) => `<li> ${address} - "${title}" </li>`
-							)}
+              ${titles
+								.map(
+									({ address, title }) => `<li> ${address} - "${title}" </li>`
+								)
+								.join(' ')}
             </ul>
           </body>
           </html>
